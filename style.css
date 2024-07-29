@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: aqua;
+	font-family: "Poppins", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+.animated-text{
+	font-size: 38px;
+	font-weight: 600;
+	min-width: 280px;
+	color: rgb(129, 126, 126);
+}
+
+.animated-text span {
+	position: relative;
+}
+
+.animated-text span::before{
+	content: "Student";
+	color: rgb(129, 126, 126);
+	animation: words 13s infinite;
+}
+
+.animated-text span::after{
+	content: "";
+	position: absolute;
+	width: calc(100% + 8px);
+	height: 100%;
+	background: #d9d9e0;
+	border-left: 4px solid  rgb(98, 97, 97);
+	color: rgb(129, 126, 126);
+	right: -8px;
+	animation: cursor .8s infinite, typing 13s steps(20) infinite;
+}
+
+@keyframes cursor{
+	to{
+		border-left: 2px solid color rgb(231, 231, 231);
+	}
+}
+
+@keyframes words {
+	0%,20%{
+		content: "Bayu Ardi.";
+	}
+	21%,40%{
+		content: "Student.";
+	}
+	41%,60%{
+		content: "Programer.";
+	}
+	61%,80%{
+		content: "Gamer.";
+	}
+	81%,100%{
+		content: "Spider-man.";
+	}
+
+}
+
+@keyframes typing {
+	5%,10%,15%,20%,25%,30%,35%,40%,45%,50%,55%,70%,75%,90%,95%{
+		width: 0;
+	}
+	5%,20%,25%,40%,45%,60%,65%,80%,85%{
+		width: calc(100% + 8px);
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	color: black;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	text-decoration-line: none;
+}
+
+.main-container {
+	width: 1200px;
+	margin: auto;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 0;
+}
+
+.nav ul {
+	list-style: none;
+	display: flex;
+	gap: 3rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 2rem;
+	color: rgb(98, 97, 97);
+}
+
+.logo a {
+	color: rgb(98, 97, 97);
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+}
+
+nav ul li a {
+	color: black;
+}
+
+#hero {
+	height: 720px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.tittle {
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+	color: gray;
+	position: relative;
+	padding-left: 25px;
+	width: fit-content;
+	font-weight: 400;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 0.9rem;
+}
+
+.tittle::before {
+	content: "";
+	width: 15px;
+	height: 1px;
+	background: gray;
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 50%;
+}
+
+.name {
+	color: rgb(98, 97, 97);
+	font-size: 3rem;
+	font-weight: 700;
+	margin: 0.5rem 0 1rem;
+}
+
+#about {
+	background: #f3f0f0;
+	padding: 9% 1%;
+	margin-top: 10rem;
+}
+
+.isi {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	margin-left: 25%;
+	position: relative;
+	bottom: 5rem;
+}
+
+#portofolio {
+	background: #ffffff;
+	padding: 10% 1%;
+	background-attachment: fixed;
+}
+
+#another {
+	background-size: cover;
+	padding: 14% 1%;
+
+	background-attachment: fixed;
+	background-color: #ffffff;
+}
+
+#contact {
+	background: #f3f0f0;
+	padding: 2% 1%;
+	background-attachment: fixed;
+}
